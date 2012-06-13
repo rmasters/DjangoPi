@@ -11,6 +11,38 @@ It also installs a few useful applications at the same time:
  - MySQL database
  - pip
 
-It will even update all the current packages on your raspberry pi for you.
+Usage
+=
 
-For this reason, we recommend you run DjangoPi as soon as you first start using your raspberry pi.
+To make things easier type:
+
+```Python
+sudo bash
+```
+
+This will give you administrative privelleges.
+
+ - Type:
+
+ ```Python
+chmod 777 DjangoPi.sh
+```
+
+to make the file executable
+
+- DjangoPi only takes one line of code to set up:
+
+```Python
+./djangopi.sh
+```
+NOTE: this will take a long time if you're running it on a clean install, so go grab a cup of tea.
+
+Adding your other packages
+=
+
+You can add your own packages to the intallation by typing the package name at the bottom of the reuquirements.txt and running djangopi again.
+
+Authors
+=
+
+Paul Hallett www.phalt.co.uk
