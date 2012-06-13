@@ -16,7 +16,9 @@ It also installs a few useful applications at the same time:
 Usage
 =
 
-To make things easier type:
+NOTE: This has only been tested on the official debian flavour of linux for the raspberry pi.
+
+- To make things easier type:
 
 ```Python
 sudo bash
@@ -37,6 +39,7 @@ to make the file executable
 ```Python
 ./djangopi.sh
 ```
+
 NOTE: this will take a long time if you're running it on a clean install, so go grab a cup of tea.
 
 Adding your other packages
