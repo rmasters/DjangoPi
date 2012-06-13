@@ -1,4 +1,4 @@
 Django==1.4
 gunicorn--0.14.2
 MySQL-python==1.2.3
-# Add your own pip packages below before installation
+# Add your own pip packages below to add them to the installation
