@@ -9,7 +9,9 @@ This package provides an easy way to install Django on the Raspberry pi.
 It also installs a few useful applications at the same time:
 
  - MySQL database
+ - Apache
  - pip
+ - gunicorn
 
 Usage
 =
@@ -24,7 +26,7 @@ This will give you administrative privelleges.
 
  - Type:
 
- ```Python
+```Python
 chmod 777 DjangoPi.sh
 ```
 
