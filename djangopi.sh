@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#! /bin/bash
 
 # 
 # djangopi
@@ -24,10 +24,12 @@
 # 
 # 
 
-echo "Updating all existing packages..."
+echo "\n"
+echo "Updating all existing packages...\n"
 sudo apt-get -y update
 
-echo "You'll be asked to enter a password for the database, don't forget it!"
+echo "\n"
+echo "You'll be asked to enter a password for the database, don't forget it! \n"
 sudo apt-get install -y --force-yes mysql-server 
 sudo apt-get install -y --force-yes mysql-client
 sudo apt-get install -y --force-yes apache2
@@ -35,19 +37,22 @@ sudo apt-get install -y --force-yes libapache2-mod-python
 # Restart apache to make sure things work
 sudo apache2 -k restart
 
-echo "Installing some essential stuff..."
-echo "Installing python essentials"
+echo "\n"
+echo "Installing some essential stuff...\n"
+echo "Installing python essentials\n"
 sudo apt-get install -y build-essential python-dev
 sudo apt-get install -y python-pip
 sudo apt-get install -y openssh-server
 sudo apt-get install -y --force-yes python-mysqldb libmysqlclient-dev 
 
-echo "Now we're going to install django and any other packages"
+echo "Now we're going to install django and any other packages\n"
 sudo pip install django
 sudo pip install -r requirements.txt
 
-echo "Finally, lets make sure Django is installed properly - this will print the version number"
+echo "\n"
+echo "Finally, lets make sure Django is installed properly - this will print the version number\n"
 python djangotest.py
 
-echo "Done! Read the readme file to set up a project"
+echo "\n"
+echo "Done! Read the readme file to set up a project\n"
 exit 0
