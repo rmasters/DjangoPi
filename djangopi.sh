@@ -46,8 +46,17 @@ sudo apt-get install -y openssh-server
 sudo apt-get install -y --force-yes python-mysqldb libmysqlclient-dev 
 
 echo "Now we're going to install django and any other packages\n"
-sudo pip install django
-sudo pip install -r requirements.txt
+# If a virtualenv is active, use the local pip rather than root's
+VE=`echo $VIRTUAL_ENV`
+if [[ -z $VE ]]; then
+    sudo pip install django
+    sudo pip install -r requirements.txt
+else
+    VE_NAME=`basename $VE`
+    echo -e "Installing into the current virtualenv ($VE_NAME)\n"
+    pip install django
+    pip install -r requirements.txt
+fi
 
 echo "\n"
 echo "Finally, lets make sure Django is installed properly - this will print the version number\n"
