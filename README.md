@@ -1,6 +1,6 @@
 DjangoPi
 =
-A one-click Django installer for Raspberry pi.
+A Amazing one-click Django installer for Raspberry pi.
 
 ----------
 
